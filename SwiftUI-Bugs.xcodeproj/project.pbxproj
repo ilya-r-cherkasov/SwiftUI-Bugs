@@ -12,6 +12,7 @@
 		0924540928816A9100870A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0924540828816A9100870A4B /* Assets.xcassets */; };
 		0924540C28816A9100870A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0924540B28816A9100870A4B /* Preview Assets.xcassets */; };
 		094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30B5288173B000E60730 /* SnapCarousel.swift */; };
+		094E30B82881AE3F00E60730 /* ListButtonsBug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30B72881AE3F00E60730 /* ListButtonsBug.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		0924540828816A9100870A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0924540B28816A9100870A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		094E30B5288173B000E60730 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
+		094E30B72881AE3F00E60730 /* ListButtonsBug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButtonsBug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				0924540428816A9000870A4B /* SwiftUI_BugsApp.swift */,
 				0924540628816A9000870A4B /* ContentView.swift */,
 				094E30B5288173B000E60730 /* SnapCarousel.swift */,
+				094E30B72881AE3F00E60730 /* ListButtonsBug.swift */,
 				0924540828816A9100870A4B /* Assets.xcassets */,
 				0924540A28816A9100870A4B /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094E30B82881AE3F00E60730 /* ListButtonsBug.swift in Sources */,
 				094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */,
 				0924540728816A9000870A4B /* ContentView.swift in Sources */,
 				0924540528816A9000870A4B /* SwiftUI_BugsApp.swift in Sources */,

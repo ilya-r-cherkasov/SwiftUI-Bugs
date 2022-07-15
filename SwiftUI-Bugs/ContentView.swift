@@ -14,6 +14,7 @@ struct ContentView: View {
                 .padding()
                 .navigationTitle("Главная")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

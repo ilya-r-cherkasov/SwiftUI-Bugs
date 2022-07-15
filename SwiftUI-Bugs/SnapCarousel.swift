@@ -1,62 +1,80 @@
 //
 //  SnapCarousel.swift
-//  SwiftUI-Bugs
+//  BeautyQR
 //
-//  Created by Ilya Cherkasov on 15.07.2022.
+//  Created by Ilya Cherkasov on 09.12.2021.
 //
 
 import SwiftUI
+import WidgetKit
 
 struct SnapCarousel: View {
-    let padding: CGFloat = 0
-    let spacing: CGFloat = 50.0
-    let size: CGFloat = 200.0
-    @State var buffer: CGFloat = 0
-    @State var offset: CGFloat = 0
+    
+    var spacing: CGFloat = 15.0
+    var trailingSpace: CGFloat = 150
+    @GestureState var offset: CGFloat = 0
     @State var currentIndex: Int = 0
-    @State var currentImageName: String = ""
+    @State var imageList = [UIImage]()
+    
     var body: some View {
-        VStack {
-            GeometryReader { proxy in
-                HStack(spacing: spacing) {
-                    ForEach(1...5, id: \.self) { num in
-                        GeometryReader { imageProxy in
-                            Image("placeholder\(num)")
-                                .resizable()
-                                .scaleEffect(getScale(parrentProxy: proxy, imageProxy: imageProxy))
+        NavigationView {
+            VStack {
+                GeometryReader { proxy in
+                    let width = proxy.size.width - (trailingSpace - spacing)
+                    let adjustMentWidth = (trailingSpace / 2) - spacing
+                    HStack(spacing: spacing){
+                        ForEach(imageList, id: \.self) { image in
+                            GeometryReader { proxy in
+                                let scale = getScale(proxy: proxy)
+                                Image(uiImage: image)
+                                    .resizable()
+                                    .cornerRadius(20.0)
+                                    .scaleEffect(scale)
+                            }
+                            .padding()
+                            .frame(
+                                width: max(proxy.size.width - trailingSpace, 0),
+                                height: max(proxy.size.width - trailingSpace, 0)
+                            )
                         }
-                        .frame(width: size, height: size)
-                        .padding(padding)
                     }
+                    .frame(maxHeight: .infinity, alignment: .center)
+                    .padding(.horizontal, spacing)
+                    .offset(x: (CGFloat(currentIndex) * -width) + adjustMentWidth + offset)
+                    .gesture(
+                        DragGesture()
+                            .updating($offset, body: { value, out, _ in
+                                out = value.translation.width
+                            })
+                            .onEnded({ value in
+                                let offsetX = value.translation.width
+                                let progress = -offsetX / width
+                                let roundIndex = progress.rounded()
+                                currentIndex = max(min(currentIndex + Int(roundIndex), imageList.count - 1), 0)
+                            })
+                    )
                 }
-                .offset(x: (proxy.size.width - size) / 2 + offset)
-                .frame(maxHeight: .infinity)
-                .gesture(
-                    DragGesture()
-                        .onChanged({ value in
-                            offset = buffer + value.translation.width
-                        })
-                        .onEnded({ value in
-                            currentIndex += -Int((value.translation.width / proxy.size.width).rounded())
-                            offset = -(size + spacing) * CGFloat(currentIndex)
-                            buffer = offset
-                            currentIndex = min(currentIndex, 3)
-                            currentImageName = "placeholder\(currentIndex + 1)"
-                        })
-                )
-                .animation(.easeInOut, value: offset)
+                .animation(.easeInOut, value: offset == 0)
+                .cornerRadius(20)
+                .shadow(radius: 5)
+            }
+        }
+        .onAppear {
+            for num in 1...6 {
+                imageList.append(UIImage(named: "placeholder\(num)")!)
             }
         }
     }
     
-    func getScale(parrentProxy: GeometryProxy, imageProxy: GeometryProxy) -> CGFloat {
-        let mid = parrentProxy.size.width / 2
+    private func getScale(proxy: GeometryProxy) -> CGFloat {
+                
+        let mid = UIScreen.main.bounds.width / 2
         let left = mid * 0.2
         let right = mid * 1.8
                 
         var scale: CGFloat = 1
         
-        let x = imageProxy.frame(in: .global).midX
+        let x = proxy.frame(in: .global).midX
         
         if (left...mid).contains(x) {
             scale =  1 + abs(x - left) * 0.002
@@ -71,7 +89,7 @@ struct SnapCarousel: View {
     
 }
 
-struct SnapCarousel_Previews: PreviewProvider {
+struct StyleChoosing_Previews: PreviewProvider {
     static var previews: some View {
         SnapCarousel()
     }

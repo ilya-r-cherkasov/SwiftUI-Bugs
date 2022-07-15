@@ -11,6 +11,7 @@
 		0924540728816A9000870A4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924540628816A9000870A4B /* ContentView.swift */; };
 		0924540928816A9100870A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0924540828816A9100870A4B /* Assets.xcassets */; };
 		0924540C28816A9100870A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0924540B28816A9100870A4B /* Preview Assets.xcassets */; };
+		094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30B5288173B000E60730 /* SnapCarousel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		0924540628816A9000870A4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0924540828816A9100870A4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0924540B28816A9100870A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		094E30B5288173B000E60730 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				0924540428816A9000870A4B /* SwiftUI_BugsApp.swift */,
 				0924540628816A9000870A4B /* ContentView.swift */,
+				094E30B5288173B000E60730 /* SnapCarousel.swift */,
 				0924540828816A9100870A4B /* Assets.xcassets */,
 				0924540A28816A9100870A4B /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */,
 				0924540728816A9000870A4B /* ContentView.swift in Sources */,
 				0924540528816A9000870A4B /* SwiftUI_BugsApp.swift in Sources */,
 			);
@@ -195,7 +199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

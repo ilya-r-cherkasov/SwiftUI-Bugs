@@ -13,6 +13,10 @@
 		0924540C28816A9100870A4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0924540B28816A9100870A4B /* Preview Assets.xcassets */; };
 		094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30B5288173B000E60730 /* SnapCarousel.swift */; };
 		094E30B82881AE3F00E60730 /* ListButtonsBug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30B72881AE3F00E60730 /* ListButtonsBug.swift */; };
+		094E30C12882AED000E60730 /* TestWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C02882AED000E60730 /* TestWrappers.swift */; };
+		094E30C32882AF3F00E60730 /* AppStorageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C22882AF3F00E60730 /* AppStorageWrapper.swift */; };
+		094E30C52882B91100E60730 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C42882B91100E60730 /* TestEnvironment.swift */; };
+		094E30C82882BE0600E60730 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C72882BE0600E60730 /* Dummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		0924540B28816A9100870A4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		094E30B5288173B000E60730 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		094E30B72881AE3F00E60730 /* ListButtonsBug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListButtonsBug.swift; sourceTree = "<group>"; };
+		094E30C02882AED000E60730 /* TestWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestWrappers.swift; sourceTree = "<group>"; };
+		094E30C22882AF3F00E60730 /* AppStorageWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageWrapper.swift; sourceTree = "<group>"; };
+		094E30C42882B91100E60730 /* TestEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironment.swift; sourceTree = "<group>"; };
+		094E30C72882BE0600E60730 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				0924540428816A9000870A4B /* SwiftUI_BugsApp.swift */,
-				0924540628816A9000870A4B /* ContentView.swift */,
-				094E30B5288173B000E60730 /* SnapCarousel.swift */,
-				094E30B72881AE3F00E60730 /* ListButtonsBug.swift */,
+				094E30BE2882AE8700E60730 /* Bugs */,
+				094E30BF2882AEAA00E60730 /* Wrappers */,
 				0924540828816A9100870A4B /* Assets.xcassets */,
 				0924540A28816A9100870A4B /* Preview Content */,
 			);
@@ -71,6 +78,35 @@
 				0924540B28816A9100870A4B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		094E30BE2882AE8700E60730 /* Bugs */ = {
+			isa = PBXGroup;
+			children = (
+				0924540628816A9000870A4B /* ContentView.swift */,
+				094E30B5288173B000E60730 /* SnapCarousel.swift */,
+				094E30B72881AE3F00E60730 /* ListButtonsBug.swift */,
+			);
+			path = Bugs;
+			sourceTree = "<group>";
+		};
+		094E30BF2882AEAA00E60730 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				094E30C62882BCB500E60730 /* TestEnvironment */,
+				094E30C02882AED000E60730 /* TestWrappers.swift */,
+				094E30C22882AF3F00E60730 /* AppStorageWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		094E30C62882BCB500E60730 /* TestEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				094E30C42882B91100E60730 /* TestEnvironment.swift */,
+				094E30C72882BE0600E60730 /* Dummy.swift */,
+			);
+			path = TestEnvironment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +181,12 @@
 			files = (
 				094E30B82881AE3F00E60730 /* ListButtonsBug.swift in Sources */,
 				094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */,
+				094E30C82882BE0600E60730 /* Dummy.swift in Sources */,
 				0924540728816A9000870A4B /* ContentView.swift in Sources */,
+				094E30C52882B91100E60730 /* TestEnvironment.swift in Sources */,
+				094E30C12882AED000E60730 /* TestWrappers.swift in Sources */,
 				0924540528816A9000870A4B /* SwiftUI_BugsApp.swift in Sources */,
+				094E30C32882AF3F00E60730 /* AppStorageWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

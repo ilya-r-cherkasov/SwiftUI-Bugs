@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_BugsApp: App {
     var body: some Scene {
         WindowGroup {
-            TestEnvironment()
+            FocusedWrappers()
         }
     }
 }

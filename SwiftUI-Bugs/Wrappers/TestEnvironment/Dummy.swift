@@ -12,7 +12,10 @@ struct Dummy: View {
     @EnvironmentObject var userProgress: UserProgress
     
     var body: some View {
-        Text("userProgress " + userProgress.score.description)
+        VStack {
+            Text("userProgress " + userProgress.score.description)
+            Text("test " + userProgress.test.description)
+        }
     }
 }
 

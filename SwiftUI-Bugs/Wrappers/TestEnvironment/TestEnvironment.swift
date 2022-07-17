@@ -17,6 +17,7 @@ struct TestEnvironment: View {
             List {
                 Button("Increase User Progress") {
                     userProgress.score += 1
+                    userProgress.test -= 1
                 }
                 Dummy()
             }
@@ -31,6 +32,7 @@ struct TestEnvironment: View {
 
 class UserProgress: ObservableObject {
     @Published var score = 0
+    var test = 8
 }
 
 struct TestEnvironment_Previews: PreviewProvider {

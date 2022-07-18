@@ -19,6 +19,7 @@
 		094E30C82882BE0600E60730 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C72882BE0600E60730 /* Dummy.swift */; };
 		094E30CB2882C69D00E60730 /* FocusedWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30CA2882C69D00E60730 /* FocusedWrappers.swift */; };
 		094E30CE2882F13F00E60730 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30CD2882F13F00E60730 /* SwiftUIView.swift */; };
+		095EFB7E28848FED00087A57 /* NestedScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFB7D28848FED00087A57 /* NestedScroll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		094E30C72882BE0600E60730 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		094E30CA2882C69D00E60730 /* FocusedWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedWrappers.swift; sourceTree = "<group>"; };
 		094E30CD2882F13F00E60730 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		095EFB7D28848FED00087A57 /* NestedScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedScroll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		094E30BE2882AE8700E60730 /* Bugs */ = {
 			isa = PBXGroup;
 			children = (
+				095EFB7D28848FED00087A57 /* NestedScroll.swift */,
 				0924540628816A9000870A4B /* ContentView.swift */,
 				094E30B5288173B000E60730 /* SnapCarousel.swift */,
 				094E30B72881AE3F00E60730 /* ListButtonsBug.swift */,
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				094E30B82881AE3F00E60730 /* ListButtonsBug.swift in Sources */,
+				095EFB7E28848FED00087A57 /* NestedScroll.swift in Sources */,
 				094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */,
 				094E30C82882BE0600E60730 /* Dummy.swift in Sources */,
 				094E30CB2882C69D00E60730 /* FocusedWrappers.swift in Sources */,

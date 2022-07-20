@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct SwiftUI_BugsApp: App {
+    
+    @ObservedObject var secureStore = SecureStore()
+    
     var body: some Scene {
         WindowGroup {
-            SnapCarousel()
+            RandomNumberView()
         }
     }
+}
+
+class SecureStore: ObservableObject {
+    var number = 5
 }

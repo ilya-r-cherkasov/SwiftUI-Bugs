@@ -18,8 +18,12 @@
 		094E30C52882B91100E60730 /* TestEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C42882B91100E60730 /* TestEnvironment.swift */; };
 		094E30C82882BE0600E60730 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30C72882BE0600E60730 /* Dummy.swift */; };
 		094E30CB2882C69D00E60730 /* FocusedWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30CA2882C69D00E60730 /* FocusedWrappers.swift */; };
-		094E30CE2882F13F00E60730 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30CD2882F13F00E60730 /* SwiftUIView.swift */; };
+		094E30CE2882F13F00E60730 /* TestObservedObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094E30CD2882F13F00E60730 /* TestObservedObjectView.swift */; };
 		095EFB7E28848FED00087A57 /* NestedScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095EFB7D28848FED00087A57 /* NestedScroll.swift */; };
+		09B272232886AC240019C1DF /* StateExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B272222886AC240019C1DF /* StateExample.swift */; };
+		09B272262886CE7A0019C1DF /* ManualSnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B272252886CE7A0019C1DF /* ManualSnapCarousel.swift */; };
+		09B272282886CEDA0019C1DF /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B272272886CEDA0019C1DF /* CustomScrollView.swift */; };
+		09B2724D2887189E0019C1DF /* RandomNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B2724C2887189E0019C1DF /* RandomNumberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +39,12 @@
 		094E30C42882B91100E60730 /* TestEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEnvironment.swift; sourceTree = "<group>"; };
 		094E30C72882BE0600E60730 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		094E30CA2882C69D00E60730 /* FocusedWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedWrappers.swift; sourceTree = "<group>"; };
-		094E30CD2882F13F00E60730 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		094E30CD2882F13F00E60730 /* TestObservedObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestObservedObjectView.swift; sourceTree = "<group>"; };
 		095EFB7D28848FED00087A57 /* NestedScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestedScroll.swift; sourceTree = "<group>"; };
+		09B272222886AC240019C1DF /* StateExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateExample.swift; sourceTree = "<group>"; };
+		09B272252886CE7A0019C1DF /* ManualSnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualSnapCarousel.swift; sourceTree = "<group>"; };
+		09B272272886CEDA0019C1DF /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
+		09B2724C2887189E0019C1DF /* RandomNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				0924540428816A9000870A4B /* SwiftUI_BugsApp.swift */,
-				0957B0E128833CDF00F88AA3 /* UIKitUsage */,
+				09B272242886C95B0019C1DF /* SnapCarousel */,
 				094E30BE2882AE8700E60730 /* Bugs */,
 				094E30BF2882AEAA00E60730 /* Wrappers */,
 				0924540828816A9100870A4B /* Assets.xcassets */,
@@ -101,7 +109,9 @@
 		094E30BF2882AEAA00E60730 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
-				094E30CC2882F12F00E60730 /* Observable */,
+				09B2724B288717A60019C1DF /* StateObject */,
+				09B415F42886AB5500DAC50D /* StateAndBindings */,
+				094E30CC2882F12F00E60730 /* ObservableObject */,
 				094E30C92882C67100E60730 /* Focused */,
 				094E30C62882BCB500E60730 /* TestEnvironment */,
 				094E30C02882AED000E60730 /* TestWrappers.swift */,
@@ -127,19 +137,37 @@
 			path = Focused;
 			sourceTree = "<group>";
 		};
-		094E30CC2882F12F00E60730 /* Observable */ = {
+		094E30CC2882F12F00E60730 /* ObservableObject */ = {
 			isa = PBXGroup;
 			children = (
-				094E30CD2882F13F00E60730 /* SwiftUIView.swift */,
+				094E30CD2882F13F00E60730 /* TestObservedObjectView.swift */,
 			);
-			path = Observable;
+			path = ObservableObject;
 			sourceTree = "<group>";
 		};
-		0957B0E128833CDF00F88AA3 /* UIKitUsage */ = {
+		09B272242886C95B0019C1DF /* SnapCarousel */ = {
 			isa = PBXGroup;
 			children = (
+				09B272252886CE7A0019C1DF /* ManualSnapCarousel.swift */,
+				09B272272886CEDA0019C1DF /* CustomScrollView.swift */,
 			);
-			path = UIKitUsage;
+			path = SnapCarousel;
+			sourceTree = "<group>";
+		};
+		09B2724B288717A60019C1DF /* StateObject */ = {
+			isa = PBXGroup;
+			children = (
+				09B2724C2887189E0019C1DF /* RandomNumberView.swift */,
+			);
+			path = StateObject;
+			sourceTree = "<group>";
+		};
+		09B415F42886AB5500DAC50D /* StateAndBindings */ = {
+			isa = PBXGroup;
+			children = (
+				09B272222886AC240019C1DF /* StateExample.swift */,
+			);
+			path = StateAndBindings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,14 +242,18 @@
 			files = (
 				094E30B82881AE3F00E60730 /* ListButtonsBug.swift in Sources */,
 				095EFB7E28848FED00087A57 /* NestedScroll.swift in Sources */,
+				09B272282886CEDA0019C1DF /* CustomScrollView.swift in Sources */,
 				094E30B6288173B000E60730 /* SnapCarousel.swift in Sources */,
+				09B272262886CE7A0019C1DF /* ManualSnapCarousel.swift in Sources */,
 				094E30C82882BE0600E60730 /* Dummy.swift in Sources */,
 				094E30CB2882C69D00E60730 /* FocusedWrappers.swift in Sources */,
-				094E30CE2882F13F00E60730 /* SwiftUIView.swift in Sources */,
+				094E30CE2882F13F00E60730 /* TestObservedObjectView.swift in Sources */,
 				0924540728816A9000870A4B /* ContentView.swift in Sources */,
 				094E30C52882B91100E60730 /* TestEnvironment.swift in Sources */,
+				09B2724D2887189E0019C1DF /* RandomNumberView.swift in Sources */,
 				094E30C12882AED000E60730 /* TestWrappers.swift in Sources */,
 				0924540528816A9000870A4B /* SwiftUI_BugsApp.swift in Sources */,
+				09B272232886AC240019C1DF /* StateExample.swift in Sources */,
 				094E30C32882AF3F00E60730 /* AppStorageWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

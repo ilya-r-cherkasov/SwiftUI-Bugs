@@ -10,29 +10,30 @@ import SwiftUI
 struct TestEnvironment: View {
     
     @Environment(\.defaultMinListRowHeight) var defaultMinListRowHeight
-    @StateObject var userProgress = UserProgress()
     
     var body: some View {
         VStack {
-            List {
-                Button("Increase User Progress") {
-                    userProgress.score += 1
-                    userProgress.test -= 1
-                }
-                Dummy()
-            }
-            .environment(\.defaultMinListRowHeight, 80)
-            Button("User Progress") {
-                print(userProgress.score)
-            }
+            Text(defaultMinListRowHeight.description)
+            Table()
+                .environment(\.defaultMinListRowHeight, 100)
         }
-        .environmentObject(userProgress)
     }
+    
 }
 
-class UserProgress: ObservableObject {
-    @Published var score = 0
-    var test = 8
+struct Table: View {
+    
+    @Environment(\.defaultMinListRowHeight) var defaultMinListRowHeight
+    
+    var body: some View {
+        List {
+            Text(defaultMinListRowHeight.description)
+            Text("Dummy")
+            Text("Dummy")
+            Text("Dummy")
+        }
+        .environment(\.defaultMinListRowHeight, 100)
+    }
 }
 
 struct TestEnvironment_Previews: PreviewProvider {
